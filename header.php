@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-sm-7">
 				<h1>
-					<a href="<?php bloginfo('wpurl'); ?>">
+					<a href="<?php bloginfo('wpurl'); ?>/#/">
 						<?php echo bloginfo('name'); ?>
 					</a>
 				</h1>
