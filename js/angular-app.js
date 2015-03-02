@@ -125,11 +125,11 @@ function ListCtrl($scope, $http, Posts, PostsNew){
   
     // DELETE POST FUNCTION
     $scope.delete = function(index, post){
-		if(post.ID){
+		if(post.id){
 			var deleteConf = confirm('Are you sure you want to delete '+post.title);
 			if(deleteConf){
 				$scope.posts.splice(index,1);
-				PostsNew.delete({id:post.ID});
+				PostsNew.delete({id:post.id});
 			}
 		}
 	};
@@ -148,7 +148,7 @@ function ListCtrl($scope, $http, Posts, PostsNew){
 				jQuery('#save').modal('hide');
 			});
 		} else {
-			$scope.$root.openPost.id = $scope.$root.openPost.ID;
+			$scope.$root.openPost.id = $scope.$root.openPost.id;
 			PostsNew.update($scope.$root.openPost, function(res){
 				Posts.update($scope);
 				$scope.$root.openPost = false;

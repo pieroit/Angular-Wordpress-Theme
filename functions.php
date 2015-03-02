@@ -121,10 +121,10 @@ add_action("wp_ajax_nopriv_new_item", "TestFunc");
 function TestFunc(){	
 		$json = str_replace(array('[', ']', '\\'), '', $_GET['data']);
 		$data = json_decode($json, true);
-		$post_id = $data['ID'];
+		$post_id = $data['id'];
 		if($post_id){
 			$my_post = array();
-			$my_post['ID'] = $post_id;
+			$my_post['id'] = $post_id;
 			$my_post['post_content'] = $data['post_content'];
 			$my_post['post_title'] = $data['post_title'];
 			wp_update_post( $my_post );
